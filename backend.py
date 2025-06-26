@@ -88,3 +88,64 @@ class KidsClothingApp:
         # Add-to-cart button
         buy_btn = tk.Button(card, text="Add to Cart", command=lambda: self.add_to_cart(product))
         buy_btn.pack(pady=5)
+
+    def add_to_cart(self, item):
+        self.shopping_cart.append(item)
+        messagebox.showinfo("Cart Updated", f"Added '{item['name']}' to cart!")
+        self.refresh_cart()
+
+    def setup_cart(self):
+        label = tk.Label(self.page_cart, text="Items in Your Cart", font=("Arial", 18))
+        label.pack(pady=10)
+
+        self.cart_display = tk.Frame(self.page_cart)
+        self.cart_display.pack()
+
+        self.refresh_cart()
+
+    def refresh_cart(self):
+        for widget in self.cart_display.winfo_children():
+            widget.destroy()
+
+        if not self.shopping_cart:
+            tk.Label(self.cart_display, text="Cart is empty!").pack()
+            return
+
+        for idx, item in enumerate(self.shopping_cart):
+            row = tk.Frame(self.cart_display)
+            row.pack(fill="x", pady=2)
+
+            tk.Label(row, text=item['name'], width=30, anchor="w").pack(side="left")
+            tk.Label(row, text=f"€{item['price']:.2f}", width=10).pack(side="left")
+            tk.Button(row, text="Remove", command=lambda i=idx: self.remove_item(i)).pack(side="left")
+
+    def remove_item(self, index):
+        removed = self.shopping_cart.pop(index)
+        messagebox.showinfo("Removed", f"Removed '{removed['name']}' from cart.")
+        self.refresh_cart()
+
+    def setup_checkout(self):
+        label = tk.Label(self.page_checkout, text="Checkout", font=("Arial", 18))
+        label.pack(pady=10)
+
+        self.total_label = tk.Label(self.page_checkout, text="", font=("Arial", 14))
+        self.total_label.pack(pady=5)
+
+        self.checkout_button = tk.Button(self.page_checkout, text="Place Order", command=self.place_order)
+        self.checkout_button.pack(pady=10)
+
+        self.update_total()
+
+    def update_total(self):
+        total = sum(item["price"] for item in self.shopping_cart)
+        self.total_label.config(text=f"Total Amount: €{total:.2f}")
+
+    def place_order(self):
+        if not self.shopping_cart:
+            messagebox.showwarning("Cart Empty", "Please add items before ordering.")
+            return
+
+        messagebox.showinfo("Order Successful!", "Thanks for shopping with TinyThreads!")
+        self.shopping_cart.clear()
+        self.refresh_cart()
+        self.update_total()
