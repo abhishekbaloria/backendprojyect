@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "name": "Dino T-Shirt",
+        "price": 12.99,
+        "category": "Tops",
+        "size": "3-4Y",
+        "desc": "Fun blue tee with a dino on it",
+        "image": "image1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Floral Dress",
+        "price": 24.95,
+        "category": "Dresses",
+        "size": "5-6Y",
+        "desc": "Cute pink dress with flowers",
+        "image": "image2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Cargo Shorts",
+        "price": 18.50,
+        "category": "Bottoms",
+        "size": "4-5Y",
+        "desc": "Comfy beige shorts with pockets",
+        "image": "image3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Unicorn Sweater",
+        "price": 22.99,
+        "category": "Tops",
+        "size": "2-3Y",
+        "desc": "Colorful sweater with a unicorn",
+        "image": "image4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Denim Overalls",
+        "price": 29.99,
+        "category": "Bottoms",
+        "size": "3-4Y",
+        "desc": "Classic blue denim overalls",
+        "image": "image5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Rainbow Leggings",
+        "price": 14.99,
+        "category": "Bottoms",
+        "size": "5-6Y",
+        "desc": "Bright rainbow stretch leggings",
+        "image": "image6.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Animal Hoodie",
+        "price": 26.99,
+        "category": "Tops",
+        "size": "4-5Y",
+        "desc": "Hoodie with cute animal ears",
+        "image": "image7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Tutu Skirt",
+        "price": 19.99,
+        "category": "Bottoms",
+        "size": "2-3Y",
+        "desc": "Sparkly pink tutu for little dancers",
+        "image": "image8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Striped Polo",
+        "price": 16.50,
+        "category": "Tops",
+        "size": "5-6Y",
+        "desc": "Blue & white striped polo shirt",
+        "image": "image9.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Winter Jacket",
+        "price": 34.99,
+        "category": "Outerwear",
+        "size": "3-4Y",
+        "desc": "Cozy waterproof jacket for cold days",
+        "image": "image10.jpg"
+    }
