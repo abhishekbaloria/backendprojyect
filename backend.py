@@ -43,24 +43,24 @@ class KidsClothingApp:
         return []
 
     def setup_home(self):
-        # Big welcome title
+        # Big title that says welcome
         title = tk.Label(self.page_home, text="Welcome to TinyThreads!", font=("Arial", 20, "bold"))
         title.pack(pady=10)
 
-        # Container for all product cards
+        # this will be the container for the product cards
         self.product_frame = tk.Frame(self.page_home)
         self.product_frame.pack()
 
-        # Loop through products and make UI card
+        # Loop for products and ui 
         for idx, item in enumerate(self.products):
             self.display_product(item, idx)
 
     def display_product(self, product, index):
-        # Single product box
+        # product box for single product 
         card = tk.Frame(self.product_frame, bd=1, relief=tk.SOLID, padx=10, pady=10)
         card.grid(row=index // 2, column=index % 2, padx=10, pady=10)
 
-        # Load and display image from file
+        # this will load and display file 
         img_path = product.get("image")
         if img_path and os.path.exists(img_path):
             try:
@@ -73,7 +73,7 @@ class KidsClothingApp:
             except Exception as e:
                 print(f"Image error: {e}")
 
-        # Product name
+        # this section is for the Product name
         name = tk.Label(card, text=product["name"], font=("Arial", 14, "bold"))
         name.pack(anchor="w")
 
