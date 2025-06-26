@@ -149,3 +149,9 @@ class KidsClothingApp:
         self.shopping_cart.clear()
         self.refresh_cart()
         self.update_total()
+
+ # launching the app ui 
+if __name__ == "__main__":
+    main_window = tk.Tk()
+    app = KidsClothingApp(main_window)
+    main_window.mainloop()       
