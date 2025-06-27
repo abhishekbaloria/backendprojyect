@@ -37,10 +37,10 @@ class KidsClothingApp:
         self.setup_checkout()
 
     def load_product_list(self):
-        if os.path.exists("kids_products.json"):
-            with open("kids_products.json", "r") as file:
-                return json.load(file)
-        return []
+        if os.path.exists("image.json"):
+         with open("image.json", "r") as file:
+          return json.load(file)
+         return []
 
     def setup_home(self):
         # Big title that says welcome
