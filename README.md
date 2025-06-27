@@ -31,9 +31,9 @@ I wanted to practice working with:
 ##  File Structure
 Backendprojyct/
 │
-├── backend.py         # Main GUI code
-├── image.json         # Product data file
-├── image1.jpg         # Product images
+├── tinythreads_backend.py         # Main GUI code
+├── image.json                     # Product data file
+├── image1.jpg                     # Product images
 ├── image2.jpg
 ├── …
 
@@ -45,4 +45,4 @@ Backendprojyct/
 
  then type 
 
- python3 backend.py
+ python3 tinythreads_backend.py
